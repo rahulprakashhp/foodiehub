@@ -1,0 +1,46 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hero Section */
+#home {
+    background: url('https://via.placeholder.com/1920x600') no-repeat center center;
+    background-size: cover;
+    padding: 100px 0;
+}
+
+#home h1 {
+    font-size: 3rem;
+}
+
+#home p {
+    font-size: 1.25rem;
+}
+
+/* Menu Section */
+#menu .card {
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#menu .card-title {
+    font-size: 1.5rem;
+}
+
+/* Contact Section */
+#contact input, #contact textarea {
+    width: 100%;
+    max-width: 600px;
+    margin: 10px auto;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+}
