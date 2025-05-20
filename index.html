@@ -10,6 +10,28 @@
     <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file here -->
 </head>
 <body>
+<script>
+  const validUsers = [
+    { username: "user1", password: "pass1" },
+    { username: "user2", password: "pass2" }
+  ];
+
+  document.querySelector("#login form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    
+    const username = e.target.querySelector('input[type="text"]').value;
+    const password = e.target.querySelector('input[type="password"]').value;
+
+    const isValid = validUsers.some(user => user.username === username && user.password === password);
+
+    if (isValid) {
+      alert("Login successful!");
+      // Optionally redirect or show user dashboard
+    } else {
+      alert("Invalid username or password!");
+    }
+  });
+</script>
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -53,31 +75,31 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Dish 1">
+                        <img src="assets\pizza.jpg" class="card-img-top" alt="Dish 1">
                         <div class="card-body">
                             <h5 class="card-title">Pizza</h5>
                             <p class="card-text">Delicious and cheesy pizza with various toppings.</p>
-                            <a href="#" class="btn btn-primary">Order Now</a>
+                            <a href="thankyouforordering.html" class="btn btn-primary">Order Now</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Dish 2">
+                        <img src="assets\burger.webp" class="card-img-top" alt="Dish 2">
                         <div class="card-body">
                             <h5 class="card-title">Burger</h5>
                             <p class="card-text">Juicy burgers made with premium beef and fresh veggies.</p>
-                            <a href="#" class="btn btn-primary">Order Now</a>
+                            <a href="thankyouforordering.html" class="btn btn-primary">Order Now</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Dish 3">
+                        <img src="assets\pasta.jpg" class="card-img-top" alt="Dish 3">
                         <div class="card-body">
                             <h5 class="card-title">Pasta</h5>
                             <p class="card-text">A variety of pasta dishes with creamy sauces.</p>
-                            <a href="#" class="btn btn-primary">Order Now</a>
+                            <a href="thankyouforordering.html" class="btn btn-primary">Order Now</a>
                         </div>
                     </div>
                 </div>
@@ -90,7 +112,7 @@
         <div class="container text-center">
             <h2 class="mb-4">Contact Us</h2>
             <p>If you have any questions, feel free to reach out!</p>
-            <form>
+            <form action="thankyou.html" method="GET">
                 <div class="mb-3">
                     <input type="text" class="form-control" placeholder="Your Name" required>
                 </div>
